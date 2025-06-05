@@ -1,31 +1,67 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Wi-Fi Passwords</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-        body { font-family: sans-serif; padding: 20px; }
-        .wifi { margin-bottom: 15px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
-        .ssid { font-weight: bold; }
-    </style>
-</head>
-<body>
-    <h2>Saved Wi-Fi Passwords</h2>
-    <div id="wifi-list"></div>
+<!doctype html>
 
-    <script>
-        fetch('/wifi-passwords')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('wifi-list');
-                data.forEach(entry => {
-                    const div = document.createElement('div');
-                    div.className = 'wifi';
-                    div.innerHTML = `<div class="ssid">SSID: ${entry.SSID}</div>
-                                     <div>Password: ${entry.Password || '(None or Not Found)'}</div>`;
-                    container.appendChild(div);
-                });
-            });
-    </script>
-</body>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <nav>
+        <a href="pages/wifi.html"></a>
+        </nav>
+        <!--[if lte IE 9]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p><![endif]-->
+
+        <p>teeeeest</p>
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Product name</th>
+                <th>Price</th>
+                <th>inventory</th>
+                <th>Product code</th>
+            </tr>
+            <tbody id="data-output">
+            <!-- Prodcuts from javascript file in here. -->
+            </tbody>
+        </table>
+
+
+
+
+        <!-- Add your site or application content here -->
+        <!-- My test paragraph -->
+        <p>Hello world! This is HTML5 Boilerplate - created by the whiteNinja. pic folder update</p>
+
+        <!-- your welcome cat pic in the img folder -->
+        <img src="img\your%20welcome.jpg">
+        <script>
+        console.log("Hello world!");
+        </script>
+
+
+        <!-- Not my code below -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
 </html>
