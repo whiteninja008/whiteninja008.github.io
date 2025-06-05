@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "whiteninja008.github.io",
+    "title": "Recipies",
+    "description": "this schema describes a recipie",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "picture": {
+            "type": "string",
+            "description": "A directory path to the img"
+
+        },
+        "description": {
+            "type": "string"
+        },
+        "rating": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "exclusiveMaximum": 10
+        }
+    },
+    "required": ["name", "picture", "description", "rating"]
+}
